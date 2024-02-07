@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    android:layout_height="?android:attr/listPreferredItemHeight">
+
+
+    <!-- "layout_gravity" -> positions the view within its parent layout.
+         "gravity" -> positions the content (text, image, etc.) within the
+         view itself.
+    -->
+    <TextView
+        android:id="@+id/earthquake_magnitude"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_gravity="center_vertical"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif-medium"
+        android:background="@drawable/magnitude_circle"
+        android:gravity="center">
+    </TextView>
+
+    <!-- android:layout_width="0dp" in a LinearLayout is commonly used in conjunction
+         with weight to distribute the available space among the child views -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/earthquake_location"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-medium"
+            android:maxLines="1"
+            android:textAllCaps="true"
+            android:textColor="@color/textColorEarthquakeDetails"
+            android:textSize="12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/earthquake_location2"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/textColorEarthquakeLocation"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/earthquake_date"
+            android:layout_width="wrap_content"
+            android:layout_gravity="end"
+            android:textSize="12sp"
+            android:textColor="@color/textColorEarthquakeDetails"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/earthquake_time"
+            android:textSize="12sp"
+            android:layout_gravity="end"
+            android:textColor="@color/textColorEarthquakeDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+
